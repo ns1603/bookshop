@@ -1,0 +1,74 @@
+@using startup.Utilities;
+@model startup.Areas.Admin.Models.AdminUser;
+@{
+    Layout = "";
+}
+<head>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Pages / Register - NiceAdmin Bootstrap Template</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Vendor CSS Files -->
+        <link href="~/admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="~/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="~/admin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="~/admin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+        <link href="~/admin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+        <link href="~/admin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="~/admin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="~/admin/assets/css/style.css" rel="stylesheet">
+
+        <!-- =======================================================
+        * Template Name: NiceAdmin - v2.4.1
+        * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->
+    </head>
+</head>
+<div class="p-5 bg-white" style="    position: fixed;
+    top: 50px;
+        right: 50%;
+    transform: translateX(50%);">
+    <form class="row g-3 needs-validation" asp-area="admin" asp-controller="LoginClient" asp-action="LoginClient" novalidate>
+        <div class="col-12">
+            <label for="yourUsername" class="form-label">Email</label>
+            <div class="input-group has-validation">
+                <input asp-for="Email" class="form-control" required>
+                <div class="invalid-feedback">Please enter your username.</div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <label for="yourPassword" class="form-label">Password</label>
+            <input type="password" asp-for="Password" class="form-control" required>
+            <div class="invalid-feedback">Please enter your password!</div>
+        </div>
+
+        <div class="col-12 text-center text-danger">
+            <h6>
+                @Functions._Message
+            </h6>
+        </div>
+
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary w-100" type="submit">Login</button>
+        </div>
+        <div class="col-12">
+            <p class="small mb-0">Don't have account? <a href="/register">Create an account</a></p>
+        </div>
+    </form>
+</div>
